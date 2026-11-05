@@ -1,0 +1,342 @@
+{
+  "bot": "soIsctice",
+  "prefix": ">",
+  "categories": ["General", "Accounts", "Music", "Twitch info", "MCSR", "7TV", "Utility", "Bot management"],
+  "commands": [
+    {
+      "name": "ping",
+      "aliases": [],
+      "category": "General",
+      "access": "Everyone",
+      "usage": "ping",
+      "description": "Shows message delay, uptime and memory use.",
+      "examples": [
+        { "input": "ping", "output": "Pong! Msg delay: 43ms | Uptime: 2m 14s | Mem: 1.4 MB" }
+      ]
+    },
+    {
+      "name": "commands",
+      "aliases": ["cmds", "help"],
+      "category": "General",
+      "access": "Everyone",
+      "usage": "commands",
+      "description": "Links to the list of commands.",
+      "examples": [
+        { "input": "commands", "output": "All commands: https://itsbr0dyy.dev/s/xxxxxx" }
+      ]
+    },
+    {
+      "name": "link",
+      "aliases": [],
+      "category": "Accounts",
+      "access": "Everyone",
+      "usage": "link <lastfm|mc> <username>",
+      "description": "Links your Last.fm or Minecraft account to your Twitch name.",
+      "examples": [
+        { "input": "link lastfm itsbr0dyy", "output": "Linked your Last.fm account: itsbr0dyy" },
+        { "input": "link mc Feinberg", "output": "Linked your Minecraft account: Feinberg" }
+      ]
+    },
+    {
+      "name": "song",
+      "aliases": [],
+      "category": "Music",
+      "access": "Everyone",
+      "usage": "song [username]",
+      "description": "Shows what you or another linked user is listening to on Last.fm.",
+      "examples": [
+        {
+          "input": "song",
+          "output": "ItsBr0dyy is currently listening to \"Bounty\" by Rich Amiri from the album \"For The Better\" plays #51 elisJam https://itsbr0dyy.dev/s/zOT7Q9"
+        },
+        { "input": "song @someone", "output": "someone hasn't linked a Last.fm account." }
+      ]
+    },
+    {
+      "name": "user",
+      "aliases": ["u"],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "user [username]",
+      "description": "Shows Twitch account info.",
+      "examples": [
+        {
+          "input": "u itsbr0dyy",
+          "output": "ItsBr0dyy • Affiliate • 648 followers • ID 1039455040 • created 2y 7mo ago • 46 chatters • last live 1d 5h ago • bio: \"plong\""
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "badge [username]",
+      "description": "Shows a user's current Twitch badge and what it's for.",
+      "examples": [
+        {
+          "input": "badge",
+          "output": "ItsBr0dyy's current badge is: Pichu | This badge was earned during the Pokémon First Partners Collection campaign."
+        }
+      ]
+    },
+    {
+      "name": "badges",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "badges [username]",
+      "description": "Shows which active event badges a user is missing and when the next one drops.",
+      "examples": [
+        {
+          "input": "badges",
+          "output": "ItsBr0dyy is missing 3/5 active badges (1 free) • Missing: Badge One (free), Badge Two, Badge Three • Next: \"Badge Six\" in 2 days, 4 hours, and 12 minutes • https://itsbr0dyy.dev/s/xxxxxx"
+        }
+      ]
+    },
+    {
+      "name": "logs",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "logs [channel] [user]",
+      "description": "Links to a user's chat logs in a channel for the current month.",
+      "examples": [
+        { "input": "logs somechannel someuser", "output": "https://itsbr0dyy.dev/s/xxxxxx" }
+      ]
+    },
+    {
+      "name": "subage",
+      "aliases": ["sa"],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "subage [username] [channel]",
+      "description": "Shows a user's subscription to a channel.",
+      "examples": [
+        {
+          "input": "sa bifters_friend markzynk",
+          "output": "bifters_friend is currently subscribed to MarkZynk with a Tier 1 gifted sub by bifter. They have been subscribed for 5 months. This sub expires in 24 days, 20 hours, and 26 minutes."
+        },
+        {
+          "input": "sa username markzynk",
+          "output": "username is currently not subscribed to MarkZynk, and never has been before."
+        }
+      ]
+    },
+    {
+      "name": "mods",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "mods [username]",
+      "description": "Shows how many channels a user moderates.",
+      "examples": [
+        {
+          "input": "mods",
+          "output": "ItsBr0dyy is a moderator in 59 channels • 2 Partners • 29 Affiliates • 104,542 total followers • https://itsbr0dyy.dev/s/xxxxxx"
+        }
+      ]
+    },
+    {
+      "name": "vips",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "vips [username]",
+      "description": "Shows how many channels a user is a VIP in.",
+      "examples": [
+        {
+          "input": "vips",
+          "output": "ItsBr0dyy is a VIP in 36 channels • 2 Partners • 9 Affiliates • 41,203 total followers • https://itsbr0dyy.dev/s/xxxxxx"
+        }
+      ]
+    },
+    {
+      "name": "founders",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "founders [username]",
+      "description": "Shows how many channels a user is a founder in.",
+      "examples": [
+        {
+          "input": "founders @someone",
+          "output": "someone is a founder in 3 channels • 0 Partners • 2 Affiliates • 1,204 total followers • https://itsbr0dyy.dev/s/xxxxxx"
+        }
+      ]
+    },
+    {
+      "name": "artists",
+      "aliases": [],
+      "category": "Twitch info",
+      "access": "Everyone",
+      "usage": "artists [username]",
+      "description": "Shows how many channels a user is an artist in.",
+      "examples": [
+        {
+          "input": "artists @someone",
+          "output": "someone is an artist in 2 channels • 0 Partners • 1 Affiliates • 648 total followers • https://itsbr0dyy.dev/s/xxxxxx"
+        }
+      ]
+    },
+    {
+      "name": "elo",
+      "aliases": [],
+      "category": "MCSR",
+      "access": "Everyone",
+      "usage": "elo [minecraft username]",
+      "description": "Shows a player's MCSR Ranked elo, rank, record and times. Uses your linked Minecraft account if you leave the name out.",
+      "examples": [
+        {
+          "input": "elo doogile",
+          "output": "doogile Stats: Elo 2089 (Peak 2089) • Netherite (#2) • W/L: 182/61 (74.9%) • Played 255 matches • Fastest time 07:20 (avg 11:01) • FF rate 0.39%"
+        }
+      ]
+    },
+    {
+      "name": "winrate",
+      "aliases": [],
+      "category": "MCSR",
+      "access": "Everyone",
+      "usage": "winrate [minecraft username] [total]",
+      "description": "Shows a player's MCSR Ranked winrate. Add \"total\" for all-time instead of this season.",
+      "examples": [
+        { "input": "winrate doogile", "output": "doogile has a 74.9% winrate this season (182W - 61L)" },
+        { "input": "winrate doogile total", "output": "doogile has a 71.2% winrate all time (402W - 163L)" }
+      ]
+    },
+    {
+      "name": "record",
+      "aliases": [],
+      "category": "MCSR",
+      "access": "Everyone",
+      "usage": "record [minecraft username] [total]",
+      "description": "Shows wins, losses, forfeits and best win streak.",
+      "examples": [
+        {
+          "input": "record doogile",
+          "output": "doogile's record this season: 182W - 61L • 255 played • 1 forfeits (0.4%) • best win streak 8"
+        }
+      ]
+    },
+    {
+      "name": "average",
+      "aliases": [],
+      "category": "MCSR",
+      "access": "Everyone",
+      "usage": "average [minecraft username] [total]",
+      "description": "Shows a player's average completion time and personal best.",
+      "examples": [
+        {
+          "input": "average doogile",
+          "output": "doogile's average time this season is 11:01.318 over 74 completions • PB 7:20.431"
+        }
+      ]
+    },
+    {
+      "name": "7tv add",
+      "aliases": ["stv add"],
+      "category": "7TV",
+      "access": "Everyone",
+      "usage": "7tv add <emote|id> [bot] [#channel] [as:alias]",
+      "description": "Adds an emote to this channel's active 7TV set. Only the broadcaster and the channel's 7TV editors can use it. Add \"bot\" to add it to the bot's own set, \"#channel\" to copy it from another channel, or \"as:alias\" to add it under a different name.",
+      "examples": [
+        { "input": "7tv add Clap", "output": "(7TV) Clap has been added successfully!" },
+        {
+          "input": "7tv add KEKW #xqc as:KEKWait",
+          "output": "(7TV) KEKWait has been added successfully from #xqc as \"KEKWait\"!"
+        }
+      ]
+    },
+    {
+      "name": "7tv remove",
+      "aliases": ["stv remove"],
+      "category": "7TV",
+      "access": "Everyone",
+      "usage": "7tv remove <emote>",
+      "description": "Removes an emote from this channel's active 7TV set. Broadcaster and 7TV editors only.",
+      "examples": [
+        { "input": "7tv remove Clap", "output": "(7TV) Clap has been removed successfully!" }
+      ]
+    },
+    {
+      "name": "7tv alias",
+      "aliases": ["stv alias"],
+      "category": "7TV",
+      "access": "Everyone",
+      "usage": "7tv alias <emote> <new alias>",
+      "description": "Renames an emote in this channel's active 7TV set. Broadcaster and 7TV editors only.",
+      "examples": [
+        { "input": "7tv alias Clap Clapping", "output": "(7TV) Successfully changed Clap to Clapping" }
+      ]
+    },
+    {
+      "name": "remindme",
+      "aliases": [],
+      "category": "Utility",
+      "access": "Everyone",
+      "usage": "remindme <time> <message>",
+      "description": "Reminds you after a delay. Time can be like 10m, 3d, 1h30m or 2months (m is minutes, months is months).",
+      "examples": [
+        { "input": "remindme 3d take out the trash", "output": "Okay, I'll remind you in 3 days." },
+        { "input": "remindme 1h30m check the oven", "output": "Okay, I'll remind you in 1 hour and 30 minutes." }
+      ]
+    },
+    {
+      "name": "remind",
+      "aliases": [],
+      "category": "Utility",
+      "access": "Everyone",
+      "usage": "remind <username> [time] <message>",
+      "description": "Leaves a message for a user, delivered when they next chat. Add a time to have it posted after that delay instead.",
+      "examples": [
+        { "input": "remind bob check the vod", "output": "Okay, I'll remind bob next time they chat." },
+        { "input": "remind bob 2h check the vod", "output": "Okay, I'll remind bob in 2 hours." }
+      ]
+    },
+    {
+      "name": "join",
+      "aliases": [],
+      "category": "Bot management",
+      "access": "Helper",
+      "usage": "join <channel>",
+      "description": "Makes the bot join a channel and saves it so it rejoins after a restart.",
+      "examples": [
+        { "input": "join somechannel", "output": "Joined #somechannel" }
+      ]
+    },
+    {
+      "name": "leave",
+      "aliases": ["part"],
+      "category": "Bot management",
+      "access": "Helper",
+      "usage": "leave [channel]",
+      "description": "Makes the bot leave a channel. Leaves the current channel if you don't name one.",
+      "examples": [
+        { "input": "leave somechannel", "output": "Leaving #somechannel" }
+      ]
+    },
+    {
+      "name": "addhelper",
+      "aliases": [],
+      "category": "Bot management",
+      "access": "Owner",
+      "usage": "addhelper <username>",
+      "description": "Gives a user helper access.",
+      "examples": [
+        { "input": "addhelper somename", "output": "Added somename as a helper." }
+      ]
+    },
+    {
+      "name": "removehelper",
+      "aliases": [],
+      "category": "Bot management",
+      "access": "Owner",
+      "usage": "removehelper <username>",
+      "description": "Removes a user's helper access.",
+      "examples": [
+        { "input": "removehelper somename", "output": "Removed somename as a helper." }
+      ]
+    }
+  ]
+}
